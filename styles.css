@@ -346,4 +346,7 @@ h4{
     footer  a {
         font-size: 14px;
       }
+      .content div button{
+        font-size: 20px;
+      }
   }
