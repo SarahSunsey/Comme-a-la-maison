@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <header>
+        <img src="Minimalist_Circle_Healthy_Cafe_Logo-removebg-preview.png"  class="logo">
+        <div class="H-info">
+            <button><a href="CommeAlaMaison.html" class="home">HOME</a></button>
+            <button><a href="" class="about">ABOUT</a></button>
+            <button><a href="" class="contactus">CONTACT-US</a></button>
+
+        </div>
+    </header>
+    <div class="KOULCH">
+    <h1>NOS PLATS</h1>
+    <div class="try" id="try">
+       
+        <div class="plates">
+           
+            <img src="images/pic1.jpg" alt="">
+            <h2>CHORBA CREVETTE</h2>
+            <h3>700DA</h3>
+        </div>
+        <div class="plates">
+            <img src="images/pic2.jpg" alt="">
+            <h2>Pain thon</h2>
+            <h3>500DA</h3>
+        </div>
+        <div class="plates">
+            <img src="images/pic3.jpg" alt="">
+            <h2>pasta avec salade</h2>
+            <h3>400DA</h3> 
+        </div>
+       
+      </div>
+    </div>
+</div>
+<footer style="height: 100px; text-align: center; margin-top: 100px;color: white; background-color: rgb(120, 48, 48);">
+    <H1>copyright ©</H1>
+    <a href="https://github.com/SarahSunsey"><h2>github SarahSunsey</h2></a>
+  </footer>
+</body>
+<script>
+    function createPlate(name, price) {
+        var tryElement = document.getElementById('try');
+    var divCount = tryElement.getElementsByClassName('plates').length +1;
+      // Create a new div element
+      var newPlate = document.createElement('div');
+      newPlate.classList.add('plates');
+    
+      // Create an img element and set its source
+      var img = document.createElement('img');
+    
+      img.src = 'images/pic'+divCount+'.jpg';
+      newPlate.appendChild(img);
+    
+      // Create an h2 element and set its text content to the name
+      var h2 = document.createElement('h2');
+      h2.textContent = name;
+      newPlate.appendChild(h2);
+    
+      // Create an h3 element and set its text content to the price
+      var h3 = document.createElement('h3');
+      h3.textContent = price;
+      newPlate.appendChild(h3);
+    
+      // Append the new div as a child of the 'try' element
+      var tryElement = document.getElementById('try');
+      tryElement.appendChild(newPlate);
+    }
+    
+    // Example usage
+    createPlate('Salade crevette','700DA');
+    createPlate('Pasta sauce rouge','400DA');
+    
+    </script>
+</html>
